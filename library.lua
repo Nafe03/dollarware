@@ -321,6 +321,12 @@ local uiScreen = Instance.new('ScreenGui') do
     end
 end
 
+UserInputService.InputBegan:Connect(function(input)
+	if input.KeyCode == Enum.KeyCode.RightShift then
+		uiScreen.Enabled = not uiScreen.Enabled
+	end
+end)
+
 -- tooltip
 local tooltip = {} do 
     do
